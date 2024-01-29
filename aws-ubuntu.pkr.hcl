@@ -11,7 +11,7 @@ packer {
 source "amazon-ebs" "ubuntu" {
   ami_name      = "packer-ubuntu-aws-{{timestamp}}"
   instance_type = "t2.micro"
-  region        = "us-east-1"
+  region        = "us-west-2"
   source_ami_filter {
     filters = {
       name                = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"
@@ -19,7 +19,7 @@ source "amazon-ebs" "ubuntu" {
       virtualization-type = "hvm"
     }
     most_recent = true
-    owners      = ["112894388373"]
+    owners      = ["099720109477"]
   }
   ssh_username = "ubuntu"
 }
